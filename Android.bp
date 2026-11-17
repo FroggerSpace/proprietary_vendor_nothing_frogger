@@ -7807,6 +7807,64 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libproviderextension",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/libproviderextension.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "liblog",
+                "libsync",
+                "libcommonchiutils",
+                "android.hardware.graphics.common@1.1",
+                "libhardware",
+                "libhidlbase",
+                "libhidltransport",
+                "libcamera_metadata",
+                "libcamxcommonutils",
+                "libcamxsettingsmanager",
+                "libqti_vndfwk_detect",
+                "libutils",
+                "libntf_vendor",
+                "android.hardware.graphics.allocator@4.0",
+                "android.hardware.graphics.mapper@4.0",
+                "libgralloc.qti",
+                "libgralloctypes",
+                "vendor.qti.hardware.display.allocator@4.0",
+                "vendor.qti.hardware.display.mapper@4.0",
+                "vendor.qti.hardware.display.mapperextensions@1.1",
+                "android.hardware.graphics.allocator-V1-ndk",
+                "libjsoncpp",
+                "com.qti.camx.chiiqutils",
+                "android.hardware.graphics.allocator-V1-ndk",
+                "libbinder_ndk",
+                "libbitmlenginev2",
+                "libcamximageformatutils",
+                "libchilog",
+                "vendor.qti.hardware.camera.aon-service-impl",
+                "vendor.qti.hardware.camera.postproc@1.0-service-impl",
+                "vendor.qti.hardware.camera.offlinecamera-service-impl",
+                "libz",
+                "libdl",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libqtigatekeeper",
     owner: "nothing",
     strip: {
@@ -25315,11 +25373,10 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/libwfdnative.so",
             ],
             shared_libs: [
-                "libinput_shim",
                 "libandroid_runtime",
-                "libgui",
+  		"libgui",
                 "libui",
-                "libbinder",
+		"libbinder",
                 "libinput",
                 "libnativehelper",
                 "libutils",
