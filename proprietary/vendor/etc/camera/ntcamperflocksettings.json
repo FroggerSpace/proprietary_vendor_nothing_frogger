@@ -1,0 +1,242 @@
+{
+  "ProcessConfig": [
+    {
+      // camera_resume, camera apk前台运行场景
+      "CameraScene": "CameraResume",
+      "TargetCpus": "0-3",
+      "Description": "Foreground running: ntcam-algo cpuset on little_cores"
+    },
+    {
+      // first_preview for extend CameraScene
+      "CameraScene": "CameraFirstPreview",
+      "TargetCpus": "0-7",
+    },
+    {
+      //camera_gallery的场景，apk下发camera_gallery=1，表示进入这个场景
+      "CameraScene": "CameraGallery",
+      "TargetCpus": "0-7", //这里配置自己想要绑定的CPU
+      "Description": "Gallery mode: ntcam-algo cpuset config"
+    },
+    {
+      //camera_gallery的场景，apk下发camera_gallery=1，表示进入这个场景
+      "CameraScene": "CameraGallery",
+      "TargetCpus": "0-7", //这里配置自己想要绑定的CPU
+      "Description": "Gallery mode: ntcam-algo cpuset config"
+    },
+    {
+      // camera_pause, camera apk后台运行场景
+      "CameraScene": "CameraPause",
+      "TargetCpus": "0-3",
+      "Description": "Background running: ntcam-algo cpuset on all cores"
+    },
+    {
+      // 录像模式1：普通录像（StreamConfigModeNormalVideo）
+      "CameraScene": "CameraNormalVideo",
+      "Description": "Normal video recording: different FPS map to different CPU cores",
+      "FpsConfig": [
+        {
+          "Fps": [30],
+          "TargetCpus": "0-3",
+          "Description": "Normal video 30fps: bind to all cores (0-7) for balanced performance"
+        },
+        {
+          "Fps": [60, 120],
+          "TargetCpus": "0-1",
+          "Description": "Normal video 60,120fps: bind to little_cores (0-1) for high frame rate stability"
+        }
+      ]
+    },
+    {
+      // 录像模式2：慢动作录像（StreamConfigModeConstrainedHighSpeed）
+      "CameraScene": "CameraHighSpeedVideo",
+      "Description": "High speed video recording: different FPS map to different CPU cores",
+      "FpsConfig": [
+        {
+          "Fps": [60, 120, 240],
+          "TargetCpus": "0-1",
+          "Description": "High-speed video 60,120,240fps: bind to little_cores (0-1) for balanced load"
+        },
+        {
+          "Fps": [480],
+          "TargetCpus": "0-1",
+          "Description": "High-speed video 480fps: bind to little_cores (0-1) for high load processing"
+        }
+      ]
+    },
+    {
+      // 录像模式3：延时摄影（StreamConfigModeTimeLapse）
+      "CameraScene": "CameraTimeLapseVideo",
+      "Description": "Time lapse video recording: different FPS map to different CPU cores",
+      "FpsConfig": [
+        {
+          "Fps": [30],
+          "TargetCpus": "0-1",
+          "Description": "Time lapse video 30fps: bind to all cores (0-1) for balanced performance"
+        }
+      ]
+    },
+  ],
+  "PipelineConfig": [
+    {
+      "PipelineName": [
+        "DefaultPipeline"
+      ],
+      "PerflockSchedulName": "pipeline-default perf strategy",
+      "MatchConditions": {
+        "OperationModeMask": [
+          "StreamConfigModeNormal",
+          "StreamConfigModeNormalPhoto",
+          "StreamConfigModeQCFAMFNR",
+          "StreamConfigModeNormalNight",
+          "StreamConfigModeMacro",
+          "StreamConfigModeMotion",
+          "StreamConfigModeFrontBokeh",
+          "StreamConfigModeBokeh"
+        ],
+        "SceneModeMask": [
+          "SINGLE_MODE",
+          "NORMAL_MODE",
+          "RAW_HDR_MODE",
+          "YUV_HDR_MODE",
+          "SR_MODE",
+          "NIGHT_MODE",
+          "DARKVISION_MODE",
+          "MOTION_MODE",
+          "PORTRAIT_NIGHT_MODE",
+          "BEAUTY_MODE",
+          "HDR_BEAUTY_MODE",
+          "TFE_NIGHT_MODE",
+          "MMF_MODE"
+        ]
+      },
+      "PipelineBinding" : [
+        {
+          "CameraScene": [
+            "CameraResume",
+            "CameraFirstPreview"
+          ],
+          "PowerHint": "0x00001342",
+        },
+        {
+          "CameraScene": [
+            "CameraPause",
+            "CameraGallery",
+          ],
+          "PowerHint": "0x00001342",
+        }
+      ],
+      "NodeCoreBinding": [
+        {
+          "NodeIdConditions": [26],
+          "CameraScene": [
+            "CameraResume",
+            "CameraFirstPreview"
+          ],
+          "TargetCores": [0, 1, 2, 3, 4, 5, 6, 7],
+          "BindingStrategy": "all_cores",
+          "Description": "Perflock: third-party is high-load, bind to little cores to keep preview smooth, matching target 'little_cores perf schedule'."
+        },
+        {
+          "NodeIdConditions": [23],
+          "CameraScene": [
+            "CameraResume",
+            "CameraPause",
+            "CameraFirstPreview",
+            "CameraGallery",
+          ],
+          "PowerHint": "0x00001343"
+        },
+        {
+          "NodeIdConditions": [21],
+          "CameraScene": [
+            "CameraResume",
+            "CameraFirstPreview"
+          ],
+          "TargetCores": [1, 2, 3],
+          "BindingStrategy": "little_cores",
+          "Description": "Perflock: third-party is high-load, bind to little cores to keep preview smooth, matching target 'little_cores perf schedule'."
+        },
+        {
+          "NodeIdConditions": [21, 26, 65535],
+          "CameraScene": [
+            "CameraPause",
+            "CameraGallery",
+          ],
+          "TargetCores": [0, 1, 2, 3, 4, 5, 6, 7],
+          "BindingStrategy": "all_cores",
+          "Description": "Perflock: third-party is high-load, bind to all cores to keep preview smooth, matching target 'all_cores perf schedule'."
+        },
+        {
+          "RamSizeType": "RAM_6GB",
+          "NodeIdConditions": [21, 26, 65535],
+          "CameraScene": [
+            "CameraPause"
+          ],
+          "TargetCores": [0, 1, 2, 3],
+          "BindingStrategy": "little_cores",
+          "Description": "Perflock: third-party is high-load, bind to all cores to keep preview smooth, matching target 'little_cores perf schedule'."
+        },
+        {
+          "NodeIdConditions": [21, 26, 65535],
+          "CameraScene": [
+            "CameraGallery"
+          ],
+          "TargetCores": [0, 1, 2, 3, 4, 5, 6, 7],
+          "BindingStrategy": "all_cores",
+          "Description": "Perflock: third-party is high-load, bind to all cores to keep preview smooth, matching target 'all_cores perf schedule'."
+        },
+        {
+          // 这里65535用来绑定NCF进程自身的线程tid, 这里配置到小核
+          "NodeIdConditions": [65535],
+          "CameraScene": [
+            "CameraResume",
+            "CameraFirstPreview"
+          ],
+          "TargetCores": [1, 2, 3],
+          "BindingStrategy": "little_cores",
+          "Description": "Perflock: third-party is high-load, bind to little cores to keep preview smooth, matching target 'little_cores perf schedule'."
+        },
+      ]
+    },
+    {
+      "PipelineName": [
+        "TestPipeline"
+      ],
+      "PerflockSchedulName": "pipeline-specific perf strategy",
+      "MatchConditions": {
+        "OperationModeMask": [
+          "StreamConfigModeNormalPhoto",
+          "StreamConfigModeNormal",
+          "StreamConfigModeQCFAMFNR",
+          "StreamConfigModeNormalNight",
+          "StreamConfigModeMacro",
+          "StreamConfigModeMotion"
+        ],
+        "SceneModeMask": [
+          "RAW_HDR_MODE",
+          "MOTION_MODE"
+        ]
+      },
+      "NodeCoreBinding": [
+        {
+          "NodeIdConditions": [63],
+          "CameraScene": [
+            "CameraPause"
+          ],
+          "TargetCores": [4, 5, 6, 7],
+          "BindingStrategy": "big_cores",
+          "Description": "Perflock: third-party is low-load, bind to big cores for maximum processing performance, matching target 'big_cores perf schedule'."
+        },
+        {
+          "NodeIdConditions": [64],
+          "CameraScene": [
+            "CameraResume"
+          ],
+          "TargetCores": [0, 1, 2, 3],
+          "BindingStrategy": "little_cores",
+          "Description": "Perflock: third-party is high-load, bind to little cores to keep preview smooth, matching target 'little_cores perf schedule'."
+        }
+      ]
+    }
+  ]
+}

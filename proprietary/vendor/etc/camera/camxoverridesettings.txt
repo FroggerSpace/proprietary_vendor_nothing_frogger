@@ -1,0 +1,100 @@
+multiCameraLogicalXMLFile=frogger.xml
+TFEDualClockThreshold=725000000
+enableHealthMonitor=FALSE
+enableEOSWithRRE=FALSE
+multiCameraDetectFrameSync=TRUE
+enableVIULLProcessing=TRUE
+
+#enable earlyPCR
+numPCRsBeforeStreamOn=1
+
+#memory optimization
+enableMallopt=1
+
+#flush time
+nodeResponseTime=200
+sessionResponseTimePadding=1000
+sessionMaxFlushWaitTime=1500
+
+#SOF Threshold
+invalidSOFThreshold=120
+
+#Node Timeout
+presilNodeRequestDoneTimeout=2000
+
+#sois param
+enableCameraSOISMask=0x9
+SOISOptimizationEnable=0x9
+SOISOTPDataSwap=TRUE
+SOISSensorSamplingRate=500
+SOISDataReportRate=500
+SOISEarlyPower=0:1|4:1
+
+#stream buffer settings
+halBufferCacheMax=8
+
+#flash param
+torchCurrent=75
+
+#ANCSAT params
+enableMFLOEMCustomization=FALSE
+distCmThresholdInFallbackTeleLow=0.0
+distCmThresholdInFallbackTeleHigh=12.0
+distCmThresholdOutFallbackTeleLow=17.0
+distCmThresholdOutFallbackTeleHigh=22000.0
+
+#ARCSOFT_SAT params
+enableFallbackCustomization=TRUE
+
+luxIndexThresholdInFallbackTeleLow=570.0
+luxIndexThresholdInFallbackTeleHigh=1000.0
+luxIndexThresholdOutFallbackTeleLow=0.0
+luxIndexThresholdOutFallbackTeleHigh=540.0
+
+# set SN threshold
+TeleAECLuxIndexThresholdForSuperNightLite=320.0
+TeleAECLuxIndexThresholdForSuperNight=320.0
+TeleAECLuxIndexThresholdForTurboNight=300.0
+
+#fallback thresholds for video mode
+distCmThresholdInFbVidLow=0.0
+distCmThresholdInFbVidHigh=12.0
+distCmThresholdOutFbVidLow=17.0
+distCmThresholdOutFbVidHigh=22000.0
+
+luxIndexThresholdInFbVidLow=570.0
+luxIndexThresholdInFbVidHigh=1000.0
+luxIndexThresholdOutFbVidLow=0.0
+luxIndexThresholdOutFbVidHigh=540.0
+
+zoomRatioThresholdInFallbackLow=2.0
+zoomRatioThresholdInFallbackHigh=9.0
+
+# DummyRequestOptimization
+enableDummyRequestOptimization=TRUE
+FDProcessingControl=AppRequest
+
+#chiLogInfoMask=0xE0
+
+disablePreProcessedOutputPorts=FALSE
+overrideScaleLimit=2
+
+# override video dataspace to BT709
+overrideVideoDataspace=overrideVideoDataspaceBT709
+# enable ISP customiation
+EnableHwBinary=TRUE
+# enable raisesigabrt for debug
+raisesigabrt=TRUE
+enableSignal35Tombstone=TRUE
+EISv2DisableOIS=FALSE
+EISv3DisableOIS=FALSE
+#Open properties to support P3 color gamut
+enableFWColorSpace=TRUE
+maxHalRequests=7
+
+# zoomratio for eis
+ZoomRatioThresholdEnablePhotoEIS = 9.0
+
+maxOptimizationVariationForInstantZoom=3
+
+ForceOISOnApp=com.larksuite.suite,com.tencent.mm,com.twitter.android,com.instagram.android,com.facebook.katana,com.snapchat.android,com.whatsapp,com.zhiliaoapp.musically

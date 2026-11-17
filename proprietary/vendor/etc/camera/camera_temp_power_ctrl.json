@@ -1,0 +1,141 @@
+{
+    "ThirdPartyCamera": {
+        "Settings": [
+            {
+                "ActivityNames": [
+                    "com.zipow.videobox.conference.ui.ZmConfActivity",
+                    "com.google.android.libraries.communications.conference.ui.greenroom.GreenroomActivity",
+                    "com.google.android.libraries.communications.conference.ui.callui.SingleCallActivity",
+                    "com.google.android.apps.tachyon.call.precall.OneOnOnePrecallActivity",
+                    "com.ss.android.vc.meeting.module.preview.facade.MeetingPreviewActivity",
+                    "com.ss.android.vc.meeting.module.multi.ByteRTCMeetingActivityInstance",
+                    "com.whatsapp.voipcalling.VoipActivityV2",
+                    "com.instagram.modal.ModalActivity",
+                    "com.tencent.wemeet.sdk.meeting.inmeeting.InMeetingActivity",
+                    "com.facebook.rooms.call.app.RoomActivity",
+                    "com.instagram.rtc.activity.RtcCallActivity"
+                ],
+                "EnableTempCtrl": false,
+                "FpsRangeControls": [
+                    {
+                        "minFps": 5,
+                        "maxFps": 15
+                    }
+                ]
+            },
+            {
+                "ActivityNames": [
+                    "com.whatsapp.calling.ui.VoipActivityV3",
+                    "com.whatsapp.calling.ui.VoipActivityV2",
+                    "com.whatsapp.voipcalling.VoipActivityV2"
+                ],
+                "EnableTempCtrl": true,
+                "FpsRangeControls": [
+                    {
+                        "temperatureThreshold": 41000,
+                        "downgradeThreshold": 40000,
+                        "minFps": 5,
+                        "maxFps": 15
+                    }
+                ],
+                "DefaultFpsRange": [
+                    {
+                        "minFps": 5,
+                        "maxFps": 20
+                    }
+                ]
+            },
+            {
+                "ActivityNames": [
+                    "com.snap.mushroom.MainActivity",
+                    "com.snapchat.android.LandingPageActivity"
+                ],
+                "EnableTempCtrl": false,
+                "FpsRangeControls": [
+                    {
+                        "minFps": 5,
+                        "maxFps": 24
+                    }
+                ]
+            },
+            {
+                "ActivityNames": [
+                    "com.facebook.katana.activity.FbMainTabActivity",
+                    "com.facebook.inspiration.activity.InspirationCameraActivity"
+                ],
+                "EnableTempCtrl": true,
+                "FpsRangeControls": [
+                    {
+                        "temperatureThreshold": 43000,
+                        "downgradeThreshold": 42000,
+                        "minFps": 5,
+                        "maxFps": 15
+                    }
+                ],
+                "DefaultFpsRange": [
+                    {
+                        "minFps": 5,
+                        "maxFps": 24
+                    }
+                ]
+            },
+            {
+                "ActivityNames": [
+                    "com.google.android.apps.search.lens.LensExportedActivity"
+                ],
+                "EnableTempCtrl": false,
+                "FpsRangeControls": [
+                    {
+                        "minFps": 5,
+                        "maxFps": 30
+                    }
+                ]
+            }
+        ],
+        "DefaultSetting": [
+            {
+                "EnableTempCtrl": true,
+                "FpsRangeControls": [
+                    {
+                        "temperatureThreshold": 47000,
+                        "downgradeThreshold": 46000,
+                        "minFps": 5,
+                        "maxFps": 24
+                    }
+                ]
+            }
+        ]
+    },
+    "NothingCameraSetting": {
+        "Settings": [
+            {
+                "CameraScenes": [
+                    "CAMERA_SCENES_VIDEO_1080P_60FPS"
+                ],
+                "EnableTempCtrl": true,
+                "FpsRangeControls": [
+                    {
+                        "temperatureThreshold": 45000,
+                        "downgradeThreshold": 43000,
+                        "minFps": 50,
+                        "maxFps": 50
+                    }
+                ]
+            },
+            {
+                "CameraScenes": [
+                    "CAMERA_SCENES_VIDEO_4K_30FPS"
+                ],
+                "EnableTempCtrl": true,
+                "FpsRangeControls": [
+                    {
+                        "temperatureThreshold": 43000,
+                        "downgradeThreshold": 42000,
+                        "minFps": 24,
+                        "maxFps": 24
+                    }
+                ]
+            }
+        ]
+    }
+}

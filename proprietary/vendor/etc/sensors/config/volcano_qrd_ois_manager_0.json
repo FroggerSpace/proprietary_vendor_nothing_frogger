@@ -1,0 +1,28 @@
+{
+  "config":{
+    "hw_platform": ["QRD"],
+    "soc_id": ["636"]
+  },
+
+  "ois_manager_0_platform":{
+    "owner": "ois_manager",
+    ".ois":{
+      "owner": "ois_manager",
+      ".fac_cal":{
+        "owner": "ois_manager",
+        ".bias":{
+          "owner": "ois_manager",
+          "x":{ "type": "int", "ver": "0",
+            "data": "0"
+          },
+          "y":{ "type": "int", "ver": "0",
+            "data": "0"
+          },
+          "z":{ "type": "int", "ver": "0",
+            "data": "0"
+          }
+        }
+      }
+    }
+  }
+}

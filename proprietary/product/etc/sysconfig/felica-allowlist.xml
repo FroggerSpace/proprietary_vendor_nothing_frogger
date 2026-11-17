@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <allow-in-power-save package="com.felicanetworks.mfc"/>
+    <allow-in-power-save package="com.felicanetworks.mfm.main"/>
+</config>
+

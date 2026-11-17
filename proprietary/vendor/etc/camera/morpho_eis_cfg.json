@@ -1,0 +1,150 @@
+{
+    /** sample json:
+    "0x80A4_0": {               // 0x80A4_0: operationMode_CameraId
+        "eisMode": -1,          // -1: unset, 0: cpu, 1: gpu, 2: ICA/WPE
+        "eisOption": -1,        // -1: unset, refer to @morpho_VideoStabilizer_Option
+        "frameDelay": 30,       // frame delay only for eisv3
+        "widthMargin": 0.2,     // width margin, request width margin, 用于放大输入, 如果小于widthMarginMin，算法会按widthMarginMin裁切
+        "heightMargin": 0.2,    // height margin, request height margin, 用于放大输入, 如果小于heightMarginMin，算法会按heightMarginMin裁切
+        "widthMarginMin": 0.2,  // Min width margin, 算法要求的最小margin
+        "heightMarginMin": 0.2, // Min height margin, 算法要求的最小margin
+        "gyroFrequency": 832.0, // gyro frequency
+        "accelFrequency": 832.0,// accel frequency
+        "oisFrequency": [       // ois frequency
+            {
+                "cameraId": 0,      // camera id
+                "frequency": 500.0  // frequency
+            },
+            {
+                "cameraId": 1,
+                "frequency": 500.0
+            }
+        ]
+    },*/
+    "0x4_1_30_0_0": {
+        "eisMode": -1,
+        "eisOption": -1,
+        "frameDelay": -1,
+        "widthMargin": -1,
+        "heightMargin": -1,
+        "widthMarginMin": -1,
+        "heightMarginMin": -1,
+        "gyroFrequency": -1,
+        "accelFrequency": -1,
+        "oisFrequency": [
+            {
+                "cameraId": 0,
+                "frequency": 500.0
+            },
+            {
+                "cameraId": 1,
+                "frequency": 500.0
+            }
+        ]
+    },
+    "0x4_2_30_1920_1080": {
+        "eisMode": -1,
+        "eisOption": -1,
+        "frameDelay": 20,
+        "widthMargin": 0.2,
+        "heightMargin": 0.4,
+        "widthMarginMin": 0.2,
+        "heightMarginMin": 0.4,
+        "gyroFrequency": 416.0,
+        "accelFrequency": 416.0,
+        "oisFrequency": [
+            {
+                "cameraId": 0,
+                "frequency": 500.0
+            },
+            {
+                "cameraId": 1,
+                "frequency": 500.0
+            }
+        ]
+    },
+    "0x0_2_30_3840_2160": {
+        "eisMode": -1,
+        "eisOption": -1,
+        "frameDelay": 15,
+        "widthMargin": 0.2,
+        "heightMargin": 0.4,
+        "widthMarginMin": 0.2,
+        "heightMarginMin": 0.4,
+        "gyroFrequency": 416.0,
+        "accelFrequency": 416.0,
+        "oisFrequency": [
+            {
+                "cameraId": 0,
+                "frequency": 500.0
+            },
+            {
+                "cameraId": 1,
+                "frequency": 500.0
+            }
+        ]
+    },
+    "0x4_2_30_3840_2160": {
+        "eisMode": -1,
+        "eisOption": -1,
+        "frameDelay": 15,
+        "widthMargin": 0.2,
+        "heightMargin": 0.4,
+        "widthMarginMin": 0.2,
+        "heightMarginMin": 0.4,
+        "gyroFrequency": 416.0,
+        "accelFrequency": 416.0,
+        "oisFrequency": [
+            {
+                "cameraId": 0,
+                "frequency": 500.0
+            },
+            {
+                "cameraId": 1,
+                "frequency": 500.0
+            }
+        ]
+    },
+    "0x0_2_60_1920_1080": {
+        "eisMode": -1,
+        "eisOption": -1,
+        "frameDelay": 20,
+        "widthMargin": 0,
+        "heightMargin": 0.25,
+        "widthMarginMin": 0.2,
+        "heightMarginMin": 0.4,
+        "gyroFrequency": 416.0,
+        "accelFrequency": 416.0,
+        "oisFrequency": [
+            {
+                "cameraId": 0,
+                "frequency": 500.0
+            },
+            {
+                "cameraId": 1,
+                "frequency": 500.0
+            }
+        ]
+    },
+    "0x3_2_60_1920_1080": {
+        "eisMode": -1,
+        "eisOption": -1,
+        "frameDelay": 20,
+        "widthMargin": 0,
+        "heightMargin": 0.25,
+        "widthMarginMin": 0.2,
+        "heightMarginMin": 0.4,
+        "gyroFrequency": 416.0,
+        "accelFrequency": 416.0,
+        "oisFrequency": [
+            {
+                "cameraId": 0,
+                "frequency": 500.0
+            },
+            {
+                "cameraId": 1,
+                "frequency": 500.0
+            }
+        ]
+    }
+}

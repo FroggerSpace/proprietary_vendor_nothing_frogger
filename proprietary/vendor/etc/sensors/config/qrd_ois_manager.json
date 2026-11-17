@@ -1,0 +1,282 @@
+{
+  "config": {
+     "hw_platform": ["QRD"],
+     "soc_id": ["636"]
+  },
+  "ois1_manager_0_platform":{
+    "owner": "ois_dual",
+    ".config":{
+      "owner": "ois_dual",
+      "param0":{ "type": "flt", "ver": "1",
+        "data": "11.0"
+      },
+      "param1":{ "type": "flt", "ver": "1",
+        "data": "1.0"
+      },
+      "param2":{ "type": "flt", "ver": "1",
+        "data": "1.2"
+      },
+      "param3":{ "type": "flt", "ver": "1",
+        "data": "1000.0"
+      },
+      "param4":{ "type": "flt", "ver": "1",
+        "data": "0.104596"
+      },
+      "param5":{ "type": "flt", "ver": "1",
+        "data": "0.104596"
+      },
+      "param6":{ "type": "flt", "ver": "1",
+        "data": "135.0"
+      },
+      "param7":{ "type": "flt", "ver": "1",
+        "data": "137.0"
+      },
+      "param8":{ "type": "flt", "ver": "1",
+        "data": "0.0"
+      },
+      "param9":{ "type": "flt", "ver": "1",
+        "data": "0.0"
+      },
+      "param10":{ "type": "flt", "ver": "1",
+        "data": "0.0"
+      },
+      "param11":{ "type": "flt", "ver": "1",
+        "data": "0.0"
+      },
+      "param12":{ "type": "flt", "ver": "1",
+        "data": "2048.0"
+      },
+      "param13":{ "type": "flt", "ver": "1",
+        "data": "2048.0"
+      },
+      "param14":{ "type": "flt", "ver": "1",
+        "data": "4096.0"
+      },
+      "param15":{ "type": "flt", "ver": "1",
+        "data": "200.0"
+      },
+      "param16":{ "type": "flt", "ver": "2",
+        "data": "0.4"
+      },
+      "param17":{ "type": "flt", "ver": "1",
+        "data": "0.001"
+      },
+      "param18":{ "type": "flt", "ver": "1",
+        "data": "500.0"
+      },
+      "param19":{ "type": "flt", "ver": "1",
+        "data": "8.29"
+      },
+      "param20":{ "type": "flt", "ver": "1",
+        "data": "6.0"
+      },
+      "param21":{ "type": "flt", "ver": "1",
+        "data": "1.0"
+      },
+      "param22":{ "type": "flt", "ver": "1",
+        "data": "1.0"
+      },
+      "param23":{ "type": "flt", "ver": "1",
+        "data": "0.0"
+      },
+      "param24":{ "type": "flt", "ver": "1",
+        "data": "0.0"
+      },
+      "param25":{ "type": "flt", "ver": "1",
+        "data": "0.0"
+      },
+      "param26":{ "type": "flt", "ver": "1",
+        "data": "0.0"
+      },
+      "param27":{ "type": "flt", "ver": "1",
+        "data": "0.0"
+      },
+      "param28":{ "type": "flt", "ver": "1",
+        "data": "0.0"
+      },
+      "param29":{ "type": "flt", "ver": "1",
+        "data": "0.0"
+      },
+      "param30":{ "type": "flt", "ver": "1",
+        "data": "0.0"
+      },
+      "param31":{ "type": "flt", "ver": "1",
+        "data": "0.0"
+      },
+      "param32":{ "type": "flt", "ver": "1",
+        "data": "0.0"
+      }
+    },
+    ".fac_cal": {
+      "owner": "ois_dual",
+      "x":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "y":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "x_max":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "x_min":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "y_max":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "y_min":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "x_gyro_check":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "y_gyro_check":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "x_angle":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "y_angle":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      }
+    }
+  },
+  "ois2_manager_0_platform":{
+    "owner": "ois_dual",
+    ".config":{
+      "owner": "ois_dual",
+      "param0":{ "type": "flt", "ver": "13",
+        "data": "84.0"
+      },
+      "param1":{ "type": "flt", "ver": "13",
+        "data": "0.8"
+      },
+      "param2":{ "type": "flt", "ver": "13",
+        "data": "1.0"
+      },
+      "param3":{ "type": "flt", "ver": "13",
+        "data": "1000.0"
+      },
+      "param4":{ "type": "flt", "ver": "13",
+        "data": "0.1"
+      },
+      "param5":{ "type": "flt", "ver": "13",
+        "data": "0.1"
+      },
+      "param6":{ "type": "flt", "ver": "13",
+        "data": "120.0"
+      },
+      "param7":{ "type": "flt", "ver": "13",
+        "data": "120.0"
+      },
+      "param8":{ "type": "flt", "ver": "13",
+        "data": "0.0"
+      },
+      "param9":{ "type": "flt", "ver": "13",
+        "data": "0.0"
+      },
+      "param10":{ "type": "flt", "ver": "13",
+        "data": "0.0"
+      },
+      "param11":{ "type": "flt", "ver": "13",
+        "data": "0.0"
+      },
+      "param12":{ "type": "flt", "ver": "13",
+        "data": "2048.0"
+      },
+      "param13":{ "type": "flt", "ver": "13",
+        "data": "2048.0"
+      },
+      "param14":{ "type": "flt", "ver": "13",
+        "data": "17.0"
+      },
+      "param15":{ "type": "flt", "ver": "13",
+        "data": "200.0"
+      },
+      "param16":{ "type": "flt", "ver": "14",
+        "data": "0.4"
+      },
+      "param17":{ "type": "flt", "ver": "14",
+        "data": "2"
+      },
+      "param18":{ "type": "flt", "ver": "14",
+        "data": "1"
+      },
+      "param19":{ "type": "flt", "ver": "13",
+        "data": "0.0"
+      },
+      "param20":{ "type": "flt", "ver": "13",
+        "data": "6.0"
+      },
+      "param21":{ "type": "flt", "ver": "13",
+        "data": "1.0"
+      },
+      "param22":{ "type": "flt", "ver": "13",
+        "data": "1.0"
+      },
+      "param23":{ "type": "flt", "ver": "13",
+        "data": "0.0"
+      },
+      "param24":{ "type": "flt", "ver": "13",
+        "data": "0.0"
+      },
+      "param25":{ "type": "flt", "ver": "13",
+        "data": "0.0"
+      },
+      "param26":{ "type": "flt", "ver": "13",
+        "data": "0.0"
+      },
+      "param27":{ "type": "flt", "ver": "13",
+        "data": "0.0"
+      },
+      "param28":{ "type": "flt", "ver": "13",
+        "data": "0.2"
+      },
+      "param29":{ "type": "flt", "ver": "13",
+        "data": "0.0"
+      },
+      "param30":{ "type": "flt", "ver": "13",
+        "data": "0.002"
+      },
+      "param31":{ "type": "flt", "ver": "13",
+        "data": "0.0"
+      },
+      "param32":{ "type": "flt", "ver": "13",
+        "data": "0.0"
+      }
+    },
+    ".fac_cal": {
+      "owner": "ois_dual",
+      "x":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "y":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "x_max":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "x_min":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "y_max":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "y_min":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "x_gyro_check":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "y_gyro_check":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "x_angle":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "y_angle":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      }
+    }
+  }
+}

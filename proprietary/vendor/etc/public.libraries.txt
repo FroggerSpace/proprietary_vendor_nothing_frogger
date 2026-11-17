@@ -1,0 +1,29 @@
+libqti-perfd-client.so
+libadsprpc.so
+libcdsprpc.so
+libsdsprpc.so
+libfastcvopt.so
+libOpenCL.so
+# guojj add for new_feature #ARCA-506
+# add libs for sphal @{
+libarcsoft_ai_moon.so 64
+libarcsoft_qnnhtp.so 64
+libarcsoft_aiscenedetection.so 64
+libnoteengine.so 64
+libarcsoft_lensstaindetection.so 64
+libarcsoft_panorama.so 64
+libarc.ion.so 64
+libarcsoft_scbokeh_video.so 64
+libfusioninterpolation.arcsoft.so 64
+libmorpho_RapidEffect.so 64
+libarcsoft_dualcam_refocus_preview.so 64
+libarcsoft_beautyshot.so 64
+# @}
+libaipasserbysegmentation.arcsoft.so 64
+libaiphotoeraser.arcsoft.so 64
+libscenesegmentation.arcsoft.so 64
+libarcsoft_Anti_EyeGlass_Reflection.so 64
+liblivephotosr.arcsoft.so 64
+libflare_reduction.arcsoft.so 64
+libarcsoft_Anti_Glass_Reflection.so 64
+libcameradecision.so 64
